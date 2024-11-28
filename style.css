@@ -1,0 +1,126 @@
+/* Estilização geral (fazer mudanças) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantir que o body ocupe toda a altura da tela */
+}
+
+/* Cabeçalho */
+header {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+}
+
+/* Logo */
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px; /* Espaçamento para um toque mais moderno */
+}
+
+/* Links da Navegação */
+header nav a {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase; /* Tornar as palavras maiúsculas */
+  padding: 10px 15px; /* Adiciona padding para aumentar a área clicável */
+  border-radius: 30px; /* Borda arredondada */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+header nav a:hover {
+  background-color: #00bcd4; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Muda a cor do texto para branco */
+}
+
+header nav a:active {
+  background-color: #0097a7; /* Cor de fundo ao clicar */
+}
+
+/* Layout da página */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex-grow: 1; /* Faz a área de conteúdo ocupar o espaço disponível */
+}
+
+/* Ajustando a aparência da área das notícias */
+.main-news {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Ajustando o tamanho das notícias */
+.main-news .news-item {
+  flex: 1;
+  min-width: 280px; /* Garantir que cada notícia tenha uma largura mínima */
+  max-width: 600px; /* Limitar o tamanho máximo para manter proporcionalidade */
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-news .news-item:hover {
+  transform: scale(1.03); /* Aumento leve nas notícias ao passar o mouse */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra suave ao passar o mouse */
+}
+
+.main-news .news-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Melhorando o layout responsivo */
+@media screen and (max-width: 768px) {
+  .main-news {
+      flex-direction: column; /* Alinha as notícias em coluna em telas menores */
+  }
+
+  .main-news .news-item {
+      min-width: 100%; /* Garante que as notícias ocupem toda a largura em telas menores */
+  }
+}
+
+/* Estilos de Footer */
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  width: 100%; /* Garante que o footer ocupe toda a largura */
+  margin-top: 20px; /* Adiciona um espaço entre o conteúdo e o footer */
+}
+
+/* Ajustes gerais para melhorar a visibilidade */
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* interação */
+}
+
+.news-item img:active {
+  transform: scale(0.95); /* Reduzir o tamanho para simular o clique */
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Cria uma sombra interna, simulando o efeito de relevo */
+}
